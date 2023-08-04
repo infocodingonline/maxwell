@@ -318,7 +318,8 @@ public class Maxwell implements Runnable {
 			if ( config.log_level != null ) {
 				Logging.setLevel(config.log_level);
 			}
-
+			config.maxwellMysql.user="root";
+			config.maxwellMysql.password="root";
 			final Maxwell maxwell = new Maxwell(config);
 
 			Runtime.getRuntime().addShutdownHook(new Thread() {
